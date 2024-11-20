@@ -17,6 +17,6 @@ Clone the repository and compile individual programs in each folder to practice 
 ```bash
 git clone https://github.com/Aniket-a14/cpp-prac.git
 cd cpp-prac
-
+```
 
 This basic structure can be expanded with additional details as you add more content to the repository.
