@@ -17,7 +17,11 @@ class Queue{
         }
 
         bool isFull(){
+            //incase of normal queue
             return rear==size-1;
+
+            //incase of circular queue
+            return (rear+1)%size==front;
         }
 
         void push(int data){
@@ -31,7 +35,11 @@ class Queue{
                 return;
             }else{
                 cout<<"Pushed item: "<<data<<endl;
+                //incase of normal queue
                 rear++;
+
+                //incase of circular queue
+                rear=(rear+1)%size;
                 arr[rear]=data;
             }
         }
@@ -45,7 +53,11 @@ class Queue{
                     front=rear=-1;
                 }else{
                     cout<<"Popped element: "<<arr[front]<<endl;
+                    //incase of normal queue
                     front++;
+
+                    //incase of circular queue
+                    front= (front+1)%size;
                 }
             }
         }
@@ -69,5 +81,9 @@ int main(){
     q.pop();
     cout<<q.isEmpty()<<endl;
     cout<<q.isFull()<<endl;
+    q.push(8);
+    q.push(1);
+    q.pop();
+    q.push(3);
     cout<<"Element at the start: "<<q.start();
 }
