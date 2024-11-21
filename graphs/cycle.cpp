@@ -1,3 +1,4 @@
+//this will work only for connected graph
 #include<iostream>
 #include<vector>
 using namespace std;
