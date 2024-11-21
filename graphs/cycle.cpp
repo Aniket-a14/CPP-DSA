@@ -36,11 +36,10 @@ int main(){
 
     vector<bool> visited(vertex,0);
 
-    if (DetectCycle(0, -1, graph, visited)) {
-        cout << "Cycle detected" << endl;
-    } else {
-        cout << "No cycle detected" << endl;
+    for(int i=0;i<vertex;i++){
+        if(!visited[i]&&DetectCycle(0, -1, graph, visited)){
+            cout<<"Cycle detected"<<endl;
+        }
     }
-
     return 0;
 }
