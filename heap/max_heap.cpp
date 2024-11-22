@@ -29,6 +29,7 @@ class MaxHeap{
         void insert(int value){
             if(size==total_size){
                 cout<<"Heap Overflow\n";
+                return;
             }
 
             arr[size] = value;
