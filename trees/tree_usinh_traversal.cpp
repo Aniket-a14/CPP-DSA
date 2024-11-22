@@ -48,13 +48,13 @@ int main(){
 
     queue<Node*> ans;
     ans.push(root);
-    vector<int> arr;
+    vector<int> vec;
 
     while(!ans.empty()){
         Node* temp= ans.front();
         ans.pop();
 
-        arr.push_back(temp->data);
+        vec.push_back(temp->data);
 
         if(temp->left!=NULL){
             ans.push(temp->left);
