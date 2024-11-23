@@ -36,6 +36,23 @@ void traversal(Node* root){
     traversal(root->right);
 }
 
+void search(Node* root, int target){
+    if(!root){
+        cout<<"Data not found";
+        return;
+    }
+
+    if(root->data==target){
+        cout<<"Data found";
+    }
+
+    if(target>root->data){
+        search(root->right,target);
+    }else{
+        search(root->left, target);
+    }
+}
+
 int main(){
     int arr[] = {10, 22, 43, 88, 62,55, 63, 79, 61, 19};
     Node *root = NULL;
@@ -44,5 +61,13 @@ int main(){
         root = insert(root, arr[i]);
     }
 
+    cout<<"Inorder traversal: ";
     traversal(root);
+
+    int to_find;
+    cout<<endl<<"Data to find: ";
+    cin>>to_find;
+    search(root, to_find);
+
+    return 0;
 }
