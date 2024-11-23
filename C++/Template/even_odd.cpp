@@ -22,6 +22,7 @@ int main(){
     cout<<"Enter size of the array: ";
     cin>>n;
 
+    cout<<"Enter elements of the array: ";
     for(int i=0;i<n;i++){
         int value;cin>>value;
         arr.push_back(value);
@@ -30,5 +31,5 @@ int main(){
     int evenSum,oddSum;
     evenorodd(arr,n,evenSum,oddSum);
 
-    cout<<"Even numbers sum is: "<<evenSum<<" and odd numbers sum is: "<<oddSum;
+    cout<<"Even numbers sum is: "<<evenSum<<endl<<"and odd numbers sum is: "<<oddSum;
 }
