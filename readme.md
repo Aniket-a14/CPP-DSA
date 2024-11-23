@@ -1,4 +1,4 @@
-# C++ Practice
+# C++ & DSA Practice
 
 This repository contains C++ programs for practicing and implementing various data structures, algorithms, and problem-solving techniques. It is designed to help developers improve their skills in C++ programming.
 
